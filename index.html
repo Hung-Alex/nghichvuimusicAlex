@@ -16,20 +16,27 @@
           right: 0;
           bottom: 0;
       }
-      .music-song { 
-          display: none;
+      #music-song { 
+          display: block;
       }
     </style>
 </head>
 <body>
-    <div class="wrap-app">
+    <div id="wrap-app">
         <img src="./img/logo-music.jpg" alt="">
-            <audio class="music-song" controls autoplay>
+            <audio id="music-song" controls autoplay>
             <source src="./mp3/y2mate.com - PRECIOUS  DADUC ft KIPER TCukak Remix  Official Lyrics Video.mp3" type="audio/ogg">
             <source src="./mp3/y2mate.com - PRECIOUS  DADUC ft KIPER TCukak Remix  Official Lyrics Video.mp3" type="audio/mpeg">
             </audio>
      </div>
-
     </div>
 </body>
+<script>
+    const on=document.getElementById("music-song");
+    const wrap=document.getElementById("wrap-app");
+    function move() {
+        on.play();
+    }
+    wrap.addEventListener('mousedown', move())
+</script>
 </html>
